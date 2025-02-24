@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anime Facts</h1>
+        <button id="factButton">Show Random Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Anime is a style of animation that originated in Japan and has become popular worldwide.",
+            "The word 'anime' is derived from the English word 'animation'.",
+            "The first anime is considered to be 'Namakura Gatana', a short film released in 1917.",
+            "Studio Ghibli, founded by Hayao Miyazaki and Isao Takahata, is one of the most famous anime studios.",
+            "Anime covers a wide range of genres, including action, romance, horror, and science fiction.",
+            "The longest-running anime series is 'Sazae-san', which started airing in 1969 and is still ongoing.",
+            "Anime is often adapted from manga, which are Japanese comic books or graphic novels.",
+            "Anime conventions, such as Anime Expo and Otakon, attract thousands of fans each year.",
+            "Anime has a significant influence on global pop culture, inspiring fashion, music, and video games.",
+            "Popular anime series like 'Naruto', 'Dragon Ball', and 'One Piece' have millions of fans worldwide."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
